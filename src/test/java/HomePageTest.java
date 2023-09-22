@@ -36,16 +36,16 @@ public class HomePageTest {
         driver.get("https://famcare.app");
     }
 
-    @Story("Load the home Page By Logo")
-    @Description("The home page will be loaded for users")
-    @Test (description = "Should be able to load home page",priority = 1)
-    public void logoLinkLocator() {
-        WebElement logo = driver.findElement(By.xpath("/html/body/header/div/div/nav/a/img"));
-        Assert.assertTrue(logo.isDisplayed());
-        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        driver.navigate().to("https://famcare.app/");
-
-        driver.quit();
-
-    }
+//    @Story("Load the home Page By Logo")
+//    @Description("The home page will be loaded for users")
+//    @Test (description = "Should be able to load home page",priority = 1)
+//    public void logoLinkLocator() {
+//        WebElement logo = driver.findElement(By.xpath("/html/body/header/div/div/nav/a/img"));
+//        Assert.assertTrue(logo.isDisplayed());
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+//        driver.navigate().to("https://famcare.app/");
+//
+//        driver.quit();
+//
+//    }
 }

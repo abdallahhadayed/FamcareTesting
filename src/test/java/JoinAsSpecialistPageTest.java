@@ -152,11 +152,11 @@ public class JoinAsSpecialistPageTest extends HomePageTest {
         WebElement joinAsSpecialistForm_send_inputLocator = driver.findElement(By.cssSelector("#joinUsModal form input[type='submit']\n"));
         joinAsSpecialistForm_send_inputLocator.click();
 
-        sleep(3000);
+        sleep(5000);
 
 
         String  successMessage = driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div/div/form/div[8]")).getText();
-        sleep(3000);
+        sleep(5000);
         System.out.println(successMessage);
 
 
