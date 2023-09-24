@@ -1,14 +1,37 @@
 import com.github.javafaker.Faker;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import java.time.Duration;
 import static java.lang.Thread.sleep;
 
-public class OrganizationsPageTest extends HomePageTest{
+public class OrganizationsPageTest {
+
+    public WebDriver driver;
+    public static JavascriptExecutor javaSE;
+    public Wait<WebDriver> wait;
+
+    @BeforeClass
+    public void setUp() {
+        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("start-maximized");
+        driver = WebDriverManager.chromedriver().capabilities(options).create();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        javaSE = (JavascriptExecutor) driver;
+        driver.get("https://famcare.app");
+    }
 
     @Story("Open Organizations Page")
     @Description("Should open Organizations Page")
@@ -65,7 +88,7 @@ public class OrganizationsPageTest extends HomePageTest{
     @Description("The specialList Name should Displayed in specialList card")
     @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 7)
     public void imageSectionDisplayed() {
-        WebElement imageSection = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div/div/div[2]/div[3]/div/div/div[1]/img"));
+        WebElement imageSection = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div/div/div[2]/div[2]/div/div/div[1]/img"));
         Assert.assertTrue(imageSection.isDisplayed());
     }
 
@@ -74,11 +97,11 @@ public class OrganizationsPageTest extends HomePageTest{
     @Description("The specialList Name should Displayed in specialList card")
     @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 8)
     public void imageTitleSectionDisplayed() {
-        WebElement imageTitleSection = driver.findElement(By.xpath("(//*[contains(text() , 'استمرارية في العطاء')])[2]"));
+        WebElement imageTitleSection = driver.findElement(By.xpath("(/html/body/div[1]/section[2]/div/div/div/div/div[2]/div[3]/div/div/div[2]/h3"));
         Assert.assertTrue(imageTitleSection.isDisplayed());
     }
 
-///////////////
+    ///////////////
     @Story("Organizations section2")
     @Description("  The Organizations card should Displayed in Organizations Page")
     @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 9)
@@ -112,6 +135,9 @@ public class OrganizationsPageTest extends HomePageTest{
         WebElement theRequestTheServiceButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));
         theRequestTheServiceButton.click();
         sleep(5000);
+
+        WebElement close_joinAsSpecialListButton = driver.findElement(By.xpath("//*[@id=\"formModal\"]/div/div/button/span"));
+        close_joinAsSpecialListButton.click();
     }
 
     @Story("Filling all form")
@@ -119,11 +145,9 @@ public class OrganizationsPageTest extends HomePageTest{
     @Test(description = "", priority = 13)
     public void shouldBeAbleToOpenRequestTheServiceForm() throws InterruptedException {
 
-        WebElement joinAOrganizations_buttonLocator = driver.findElement(By.xpath("//*[@title = 'المنظمات']"));
-        joinAOrganizations_buttonLocator.click();
-
-        WebElement requestTheServiceFButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));
-        requestTheServiceFButton.click();
+        WebElement theRequestTheServiceButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));
+        theRequestTheServiceButton.click();
+        sleep(5000);
 
         String your_name = Faker.instance().name().name();
         WebElement joinAsSpecialistForm_yourName_inputLocator = driver.findElement(By.xpath("//*[@id=\"wpcf7-f167-o1\"]/form/div[2]/input"));
@@ -145,7 +169,7 @@ public class OrganizationsPageTest extends HomePageTest{
         joinAsSpecialistForm_specialization_inputLocator.sendKeys(your_company);
         System.out.println(your_company);
 
-        String number_of_employee = Faker.instance().number().numberBetween(1,10) + "";
+        String number_of_employee = Faker.instance().number().numberBetween(1, 10) + "";
         WebElement joinAsSpecialistForm_experience_inputLocator = driver.findElement(By.xpath("//*[@id=\"wpcf7-f167-o1\"]/form/div[6]/input"));
         joinAsSpecialistForm_experience_inputLocator.sendKeys(number_of_employee);
         System.out.println(number_of_employee);
@@ -157,7 +181,7 @@ public class OrganizationsPageTest extends HomePageTest{
         sleep(5000);
 
 
-        String  successMessage = driver.findElement(By.xpath("/html/body/div[3]/div/div/div/div/div/form/div[7]")).getText();
+        String successMessage = driver.findElement(By.xpath("/html/body/div[3]/div/div/div/div/div/form/div[7]")).getText();
         sleep(5000);
         System.out.println(successMessage);
 

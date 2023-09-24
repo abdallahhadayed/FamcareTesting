@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Abdallah Hadayed">
+    <test name="Famcare Test">
+        <classes>
+            <class name="HomePageTest"/>
+            <class name="SpecialistsPageTest"/>
+            <class name="BlogPageTest"/>
+            <class name="JoinAsSpecialistPageTest"/>
+            <class name="AboutUsPageTest"/>
+            <class name="OrganizationsPageTest"/>
+            <class name="AcademyPageTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
