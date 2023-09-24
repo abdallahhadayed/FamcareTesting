@@ -52,9 +52,9 @@ public class JoinAsSpecialistPageTest {
         close_joinAsSpecialListButton.click();
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 3)
+    @Story("Should Be Able ToFill Join As Specialist Form")
+    @Description("Should Be Able ToFill Join As Specialist Form")
+    @Test(priority = 3)
     public void shouldBeAbleToFillJoinAsSpecialistForm() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -69,9 +69,9 @@ public class JoinAsSpecialistPageTest {
 
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 4)
+    @Story("Join As Specialist Form_yourPhone_inputLocator")
+    @Description("Join As Specialist Form_yourPhone_inputLocator")
+    @Test(priority = 4)
     public void joinAsSpecialistForm_yourPhone_inputLocator() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -85,9 +85,9 @@ public class JoinAsSpecialistPageTest {
         close_joinAsSpecialListButton.click();
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 5)
+    @Story("join As Specialist Form_degree_inputLocator")
+    @Description("join As Specialist Form_degree_inputLocator")
+    @Test(priority = 5)
     public void joinAsSpecialistForm_degree_inputLocator() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -101,9 +101,9 @@ public class JoinAsSpecialistPageTest {
         close_joinAsSpecialListButton.click();
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 6)
+    @Story("join As Specialist Form_specialization_inputLocator")
+    @Description("join As Specialist Form_specialization_inputLocator")
+    @Test(priority = 6)
     public void joinAsSpecialistForm_specialization_inputLocator() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -117,9 +117,9 @@ public class JoinAsSpecialistPageTest {
         close_joinAsSpecialListButton.click();
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 7)
+    @Story("join As Specialist Form_experience_inputLocator")
+    @Description("join As Specialist Form_experience_inputLocator")
+    @Test(priority = 7)
     public void joinAsSpecialistForm_experience_inputLocator() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -132,9 +132,9 @@ public class JoinAsSpecialistPageTest {
         close_joinAsSpecialListButton.click();
     }
 
-    @Story("")
-    @Description("")
-    @Test(description = "", priority = 8)
+    @Story("join As Specialist Form_socialmedia_inputLocator")
+    @Description("join As Specialist Form_socialmedia_inputLocator")
+    @Test(priority = 8)
     public void joinAsSpecialistForm_socialmedia_inputLocator() {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();
@@ -149,8 +149,8 @@ public class JoinAsSpecialistPageTest {
     }
 
     @Story("Filling all form")
-    @Description("")
-    @Test(description = "", priority = 9)
+    @Description("Filling all form")
+    @Test(priority = 9)
     public void shouldBeAbleToOpenJoinAsSpecialistForm() throws InterruptedException {
         WebElement joinAsspecialListButton = driver.findElement(By.xpath("//*[@id='navbarContent']/button"));
         joinAsspecialListButton.click();

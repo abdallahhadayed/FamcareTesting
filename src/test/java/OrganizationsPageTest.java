@@ -24,7 +24,6 @@ public class OrganizationsPageTest {
     @BeforeClass
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("start-maximized");
         driver = WebDriverManager.chromedriver().capabilities(options).create();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.manage().window().maximize();
@@ -52,8 +51,8 @@ public class OrganizationsPageTest {
     }
 
     @Story("The Organizations Description should Displayed")
-    @Description(" Verify The Organizations Description should Displayed")
-    @Test(description = "The Organizations Description should Displayed In specialList Page", priority = 3)
+    @Description("Verify The Organizations Description should Displayed")
+    @Test(description = "The Organizations Description should Displayed In Organizations Page", priority = 3)
     public void descriptionInOrganizationsIsDisplayed() {
         WebElement organizationsDescription = driver.findElement(By.xpath("//*[contains(text() , 'في فامكير للمنظمات نساهم بتعزيز صحة موظفيك النفسية لخلق بيئة عمل صحية مليئة بالعطاء والإنتاجية لما لها أثر كبير على أداء الموظفين و إنتاجيتهم ويمتد أثرها لأسرة الموظف وتمكينهم لمواجهة المشاكل الأسرية والتربوية')]"));
         Assert.assertTrue(organizationsDescription.isDisplayed());
@@ -61,67 +60,64 @@ public class OrganizationsPageTest {
     }
 
     @Story("image Organizations")
-    @Description("  The Organizations profile image should Displayed in specialList card ")
-    @Test(description = "Verify The specialList profile image is Displayed in specialList card", priority = 4)
+    @Description("The Organizations profile image should Displayed in Organizations")
+    @Test(description = "Verify The Organizations profile image is Displayed in Organizations", priority = 4)
     public void basicImageInOrganizationsIsDisplayed() {
         WebElement organizationsImage = driver.findElement(By.xpath("/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/img"));
         Assert.assertTrue(organizationsImage.isDisplayed());
     }
 
     @Story("Organizations section")
-    @Description("  The Organizations card should Displayed in Organizations Page")
-    @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 5)
+    @Description("The Organizations card should Displayed in Organizations Page")
+    @Test(description = "Verify The Organizations card is Displayed in Organizations Page", priority = 5)
     public void organizationsSectionDisplayed() {
         WebElement organizationsSection = driver.findElement(By.xpath("/html/body/div[1]/section[2]"));
         Assert.assertTrue(organizationsSection.isDisplayed());
     }
 
     @Story("Organizations section title")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 6)
+    @Description("The specialList Name should Displayed in Organizations title")
+    @Test(description = "Verify The Organizations Name is Displayed in Organizations title ", priority = 6)
     public void titleOrganizationsSectionDisplayed() {
         WebElement titleSection = driver.findElement(By.xpath("//*[contains(text() , 'أثر الصحة النفسية على أداء الموظفين')]"));
         Assert.assertTrue(titleSection.isDisplayed());
     }
 
     @Story("Organizations section image Displayed")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 7)
+    @Description("The Organizations image should Displayed in Organizations ")
+    @Test(description = "Verify The Organizations image is Displayed in Organizations", priority = 7)
     public void imageSectionDisplayed() {
         WebElement imageSection = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div/div/div[2]/div[2]/div/div/div[1]/img"));
         Assert.assertTrue(imageSection.isDisplayed());
     }
 
-
     @Story("Organizations section image title Displayed")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 8)
+    @Description("The Organizations image title should Displayed in Organizations")
+    @Test(description = "Verify The Organizations image title is Displayed in Organizations  ", priority = 8)
     public void imageTitleSectionDisplayed() {
         WebElement imageTitleSection = driver.findElement(By.xpath("(/html/body/div[1]/section[2]/div/div/div/div/div[2]/div[3]/div/div/div[2]/h3"));
         Assert.assertTrue(imageTitleSection.isDisplayed());
     }
 
-    ///////////////
     @Story("Organizations section2")
-    @Description("  The Organizations card should Displayed in Organizations Page")
-    @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 9)
+    @Description("  The Organizations section2 should Displayed in Organizations Page")
+    @Test(description = "Verify The Organizations section2 is Displayed in Organizations Page", priority = 9)
     public void organizationsSection2Displayed() {
         WebElement organizationsSection2 = driver.findElement(By.xpath("/html/body/div[1]/section[3]"));
         Assert.assertTrue(organizationsSection2.isDisplayed());
     }
 
     @Story("Organizations section2 title")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 10)
+    @Description("The Organizations section2 title should Displayed in Organizations")
+    @Test(description = "Verify The Organizations section2 title is Displayed in Organizations", priority = 10)
     public void titleOrganizationsSection2Displayed() {
         WebElement titleSection2 = driver.findElement(By.xpath("//*[contains(text() , 'عزّز صحة موظفيك النفسية وسجل الآن')]"));
         Assert.assertTrue(titleSection2.isDisplayed());
     }
 
-
     @Story("Request the service button should be displayed")
-    @Description("  The specialList Book an appointment button should Displayed in specialList card")
-    @Test(description = "Verify The specialList Book an appointment button is Displayed in specialList card ", priority = 11)
+    @Description("  The Organizations  service button should Displayed in Organizations ")
+    @Test(description = "Verify The Organizations  service button is Displayed in Organizations", priority = 11)
     public void theRequestTheServiceButtonIsDisplayed() {
         WebElement RequestTheServiceButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));
         Assert.assertTrue(RequestTheServiceButton.isDisplayed());
@@ -129,8 +125,8 @@ public class OrganizationsPageTest {
     }
 
     @Story("Request the service button should be Clickable")
-    @Description("  The specialList profile page button should Clickable in specialList card")
-    @Test(description = "Verify The specialList profile page button is Clickable in specialList card ", priority = 12)
+    @Description("  The Organizations service button should Clickable in Organizations ")
+    @Test(description = "Verify The Organizations service button is Clickable in Organizations", priority = 12)
     public void theRequestTheServiceButtonIsClickable() throws InterruptedException {
         WebElement theRequestTheServiceButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));
         theRequestTheServiceButton.click();
@@ -141,8 +137,8 @@ public class OrganizationsPageTest {
     }
 
     @Story("Filling all form")
-    @Description("")
-    @Test(description = "", priority = 13)
+    @Description("Filling all form")
+    @Test(priority = 13)
     public void shouldBeAbleToOpenRequestTheServiceForm() throws InterruptedException {
 
         WebElement theRequestTheServiceButton = driver.findElement(By.xpath("/html/body/div[1]/section[3]/div/div/div/div/div[2]/button"));

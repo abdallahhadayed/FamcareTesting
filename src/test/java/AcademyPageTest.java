@@ -22,7 +22,6 @@ public class AcademyPageTest {
     @BeforeClass
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("start-maximized");
         driver = WebDriverManager.chromedriver().capabilities(options).create();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.manage().window().maximize();
@@ -30,10 +29,9 @@ public class AcademyPageTest {
         javaSE = (JavascriptExecutor) driver;
         driver.get("https://famcare.app");
     }
-
     @Story("Open AcademyPage")
-    @Description("should open specialList page")
-    @Test(description = "The Specialist button on navbar should able to navigate to specialList page", priority = 0)
+    @Description("should open AcademyPage page")
+    @Test(description = "The AcademyPage button on navbar should able to navigate to AcademyPage page", priority = 0)
     public void AcademyPageButtonInNavBarIsOpenAcademyPage() {
         WebElement AcademyPageButton = driver.findElement(By.xpath("//*[@title = 'الأكاديمية']"));
         AcademyPageButton.click();

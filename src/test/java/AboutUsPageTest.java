@@ -32,17 +32,17 @@ public class AboutUsPageTest {
         driver.get("https://famcare.app");
     }
 
-    @Story("Open About As Page")
-    @Description("Should open About As Page")
-    @Test(description = "The About As button on navbar should able to navigate to About As page", priority = 1)
+    @Story("Open About Us Page")
+    @Description("Should open About Us page")
+    @Test(description = "The About Us button on navbar should able to navigate to About Us page", priority = 1)
     public void joinAboutUs_buttonLocator() {
         WebElement joinAboutUs_buttonLocator = driver.findElement(By.xpath("//*[@title = 'من نحن']"));
         joinAboutUs_buttonLocator.click();
     }
 
-    @Story("The specialList title should Displayed")
-    @Description(" Verify The specialList title should Displayed")
-    @Test(description = "The specialList title should Displayed In specialList Page", priority = 2)
+    @Story("The About As title should Displayed")
+    @Description(" Verify The About Us title should Displayed in About Us page")
+    @Test(description = "The About Us title should Displayed In About Us page", priority = 2)
     public void titleInAboutAsIsDisplayed() {
 
         WebElement aboutUsTitle = driver.findElement(By.xpath("(//*[contains(text() , 'منصة فامكير')])[1]"));
@@ -50,9 +50,9 @@ public class AboutUsPageTest {
 
     }
 
-    @Story("The specialList title should Displayed")
-    @Description(" Verify The specialList title should Displayed")
-    @Test(description = "The specialList title should Displayed In specialList Page", priority = 3)
+    @Story("The About As subtitle should Displayed")
+    @Description(" Verify The About Us subtitle should Displayed in About Us page")
+    @Test(description = "The About Us subtitle should Displayed In About Us page", priority = 3)
     public void subTitleInAboutAsIsDisplayed() {
         WebElement aboutUsSubTitle = driver.findElement(By.xpath("//*[contains(text() , 'بدأت من منطلق اهتمامنا بتعزيز الصحة')]"));
         Assert.assertTrue(aboutUsSubTitle.isDisplayed());
@@ -60,72 +60,72 @@ public class AboutUsPageTest {
     }
 
     @Story("image about us")
-    @Description("  The specialList profile image should Displayed in specialList card ")
-    @Test(description = "Verify The specialList profile image is Displayed in specialList card", priority = 4)
+    @Description("  The About Us image should Displayed inAbout Us page")
+    @Test(description = "Verify The About Us image is Displayed in About Us page", priority = 4)
     public void basicImageInAboutUsIsDisplayed() {
         WebElement aboutUsImage = driver.findElement(By.xpath("/html/body/div[1]/section[1]/div/div/div[2]/div/div/img"));
         Assert.assertTrue(aboutUsImage.isDisplayed());
     }
 
-    @Story("OurVisionCard")
-    @Description("  The specialList card should Displayed in specialList Page")
-    @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 5)
+    @Story("Our Vision Card")
+    @Description("  The Our Vision Card should Displayed in About Us page")
+    @Test(description = "Verify Our Vision Card is Displayed in About Us page", priority = 5)
     public void ourVisionCardDisplayed() {
         WebElement ourVisionCard = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[1]/div"));
         Assert.assertTrue(ourVisionCard.isDisplayed());
     }
 
-    @Story("OurVisionCard name")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 6)
+    @Story("Our Vision Card name")
+    @Description("The Our Vision Card name should Displayed in About Us page")
+    @Test(description = "Verify The Our Vision Card name is Displayed in About Us page", priority = 6)
     public void titleOurVisionCardDisplayed() {
         WebElement titleCart = driver.findElement(By.xpath("//*[contains(text() , 'رؤيتنا')]"));
         Assert.assertTrue(titleCart.isDisplayed());
     }
 
     @Story("The OurVisionCard Description should be displayed")
-    @Description("  The specialList Description should Displayed in specialList card")
-    @Test(description = "Verify The specialList Description is Displayed in specialList card ", priority = 7)
+    @Description("  The About Us  Description should Displayed in About Us page")
+    @Test(description = "Verify The About Us Description is Displayed in About Us page", priority = 7)
     public void theOurVisionCardDescriptionIsDisplayed() {
         WebElement ourVisionCardDescription = driver.findElement(By.xpath("//*[contains(text() , 'أن نكون منصة رائدة عربياً في مجال تقديم الاستشارات الأسرية والزوجية والدعم النفسي.')]"));
         Assert.assertTrue(ourVisionCardDescription.isDisplayed());
     }
 
     @Story("Our values")
-    @Description("  The specialList card should Displayed in specialList Page")
-    @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 8)
+    @Description("  The Our values card should Displayed in About Us page")
+    @Test(description = "Verify Our values card is Displayed in About Us page", priority = 8)
     public void ourvaluesCardDisplayed() {
         WebElement ourvaluesCard = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[2]/div"));
         Assert.assertTrue(ourvaluesCard.isDisplayed());
     }
 
-    @Story("OurValues Card name")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 9)
+    @Story("Our Values Card name")
+    @Description("The Our Values Card name should Displayed in About Us page")
+    @Test(description = "Verify Our Values Card name is Displayed in About Us page", priority = 9)
     public void titleOurValuesCardDisplayed() {
         WebElement titleOurValuesCart = driver.findElement(By.xpath("//*[contains(text() , 'قيمنا')]"));
         Assert.assertTrue(titleOurValuesCart.isDisplayed());
     }
 
-    @Story("OurValues CardList")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 10)
+    @Story("Our Values Card List")
+    @Description("The Our Values Card List should Displayed in About Us page")
+    @Test(description = "Verify Our Values Card List is Displayed in About Us page", priority = 10)
     public void listOurValuesCardDisplayed() {
         WebElement listOurValuesCart = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[2]/div/div[3]/ul"));
         Assert.assertTrue(listOurValuesCart.isDisplayed());
     }
 
-    @Story("OurValues Card image list")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 11)
+    @Story("Our Values Card image list")
+    @Description("The Our Values Card image list should Displayed in About Us page")
+    @Test(description = "Verify Our Values Card image list is Displayed in About Us page", priority = 11)
     public void imageListOurValuesCardDisplayed() {
         WebElement imagelistOurValuesCart = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[2]/div/div[3]/ul/li[1]/img"));
         Assert.assertTrue(imagelistOurValuesCart.isDisplayed());
     }
 
-    @Story("OurValues Card title list")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 12)
+    @Story("Our Values Card title list")
+    @Description("The Our Values Card title list should Displayed in About Us page")
+    @Test(description = "Verify The Our Values Card title list is Displayed in About Us page", priority = 12)
     public void titleListOurValuesCardDisplayed() {
         WebElement titlelistOurValuesCart = driver.findElement(By.xpath("//*[contains(text() , 'خصوصية وأمان')]"));
         Assert.assertTrue(titlelistOurValuesCart.isDisplayed());
@@ -133,42 +133,42 @@ public class AboutUsPageTest {
 
 
     @Story("Join us as a consultant")
-    @Description("  The specialList card should Displayed in specialList Page")
-    @Test(description = "Verify The specialList card is Displayed in specialList Page", priority = 13)
+    @Description("  TheJoin us as a consultant should Displayed in About Us page")
+    @Test(description = "Verify Join us as a consultant is Displayed in About Us page", priority = 13)
     public void joinUsAsConsultantCardDisplayed() {
         WebElement joinUsAsConsultantCard = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[3]/div"));
         Assert.assertTrue(joinUsAsConsultantCard.isDisplayed());
     }
 
     @Story("Join us as a consultant Card name")
-    @Description("The specialList Name should Displayed in specialList card")
-    @Test(description = "Verify The specialList Name is Displayed in specialList card ", priority = 14)
+    @Description("The Join us as a consultant Card name should Displayed in About Us page")
+    @Test(description = "Verify The Join us as a consultant Card name is Displayed in About Us page", priority = 14)
     public void titlejoinUsAsConsultanCardDisplayed() {
         WebElement titlejoinUsAsConsultanCart = driver.findElement(By.xpath("//*[contains(text() , 'انضم لنا كمستشار')]"));
         Assert.assertTrue(titlejoinUsAsConsultanCart.isDisplayed());
     }
 
     @Story("The Join us as a consultant Description should be displayed")
-    @Description("  The specialList Description should Displayed in specialList card")
-    @Test(description = "Verify The specialList Description is Displayed in specialList card ", priority = 15)
-    public void thejoinUsAsConsultanDescriptionIsDisplayed() {
+    @Description("The Join us as a consultant Description should be displayed in About Us page")
+    @Test(description = "Verify Join us as a consultant Description should be displayed in About Us page", priority = 15)
+    public void theJoinUsAsConsultanDescriptionIsDisplayed() {
         WebElement joinUsAsConsultanCardDescription = driver.findElement(By.xpath("//*[contains(text() , 'إذا كنت مستشار معتمد ومهتم بالمجال كُن جزء من فريقنا وساهم بتعزيز الصحة النفسية بالمجتمع')]"));
         Assert.assertTrue(joinUsAsConsultanCardDescription.isDisplayed());
     }
 
 
     @Story("email in The Join us as a consultant cart button should be displayed")
-    @Description("  The specialList profile page button should Displayed in specialList card")
-    @Test(description = "Verify The specialList profile page button is Displayed in specialList card ", priority = 16)
-    public void thejoinUsAsConsultanButtonIsDisplayed() {
+    @Description("email in The Join us as a consultant cart button should Displayed in About Us page")
+    @Test(description = "Verify The email in The Join us as a consultant cart button Displayed in About Us page", priority = 16)
+    public void theJoinUsAsConsultanButtonIsDisplayed() {
         WebElement emailButton = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[3]/div/div[6]/a"));
         Assert.assertTrue(emailButton.isDisplayed());
 
     }
 
     @Story("email in The Join us as a consultant cart button should be Clickable")
-    @Description("  The specialList profile page button should Clickable in specialList card")
-    @Test(description = "Verify The specialList profile page button is Clickable in specialList card ", priority = 17)
+    @Description("The email in The Join us as a consultant cart button should Clickable in About Us page")
+    @Test(description = "Verify The email in The Join us as a consultant cart button should Clickable in About Us page", priority = 17)
     public void thejoinUsAsConsultanButtonIsClickable() {
         WebElement emailButtonClick = driver.findElement(By.xpath("/html/body/div[1]/section[2]/div/div/div[3]/div/div[6]/a"));
         emailButtonClick.click();
